@@ -10,7 +10,7 @@ class SplachScreen extends StatefulWidget {
 
 class _SplachScreenState extends State<SplachScreen> {
   navigatFun() async {
-    await Future.delayed(Duration(seconds: 3));
+    await Future.delayed(const Duration(seconds: 3));
     Provider.of<Auth_Provider>(context, listen: false).checkUser();
   }
 

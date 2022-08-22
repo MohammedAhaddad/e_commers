@@ -64,8 +64,8 @@ class Auth_Provider extends ChangeNotifier {
     }
   }
 
-  Widget checkUser() {
-    return Auth_hilper.auth_hilper.checkUser();
+  checkUser() {
+    Auth_hilper.auth_hilper.checkUser();
   }
 
   forgetPass() {

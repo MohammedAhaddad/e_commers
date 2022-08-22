@@ -11,6 +11,7 @@ import 'package:e_commers/home_view/Screen/AddScreen.dart';
 import 'package:e_commers/home_view/Screen/ViewAllCategory.dart';
 import 'package:e_commers/home_view/products/MainScreenProducts.dart';
 import 'package:e_commers/router/router.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -22,11 +23,17 @@ class Home_Scrren extends StatelessWidget {
         child: Scaffold(
       backgroundColor: Color.fromARGB(255, 192, 214, 194),
       appBar: AppBar(
-        title: const Text("Home Screen"),
+        title: Text("Home Screen".tr()),
         backgroundColor: const Color.fromARGB(255, 200, 208, 214),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              if (context.locale.toString() == 'en') {
+                context.setLocale(const Locale('ar'));
+              } else {
+                context.setLocale(const Locale('en'));
+              }
+            },
             icon: const Icon(Icons.language),
           ),
           IconButton(

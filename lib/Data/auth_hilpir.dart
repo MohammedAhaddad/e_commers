@@ -80,12 +80,12 @@ class Auth_hilper {
     }
   }
 
-  Widget checkUser() {
+  checkUser() {
     User? user = firebaseAuth.currentUser;
     if (chek == false) {
-      return signIn();
+      AppRouter.NavigateWithReplacemtnToWidget(signIn());
     } else {
-      return Home_Scrren();
+      AppRouter.NavigateWithReplacemtnToWidget(Home_Scrren());
     }
   }
 
